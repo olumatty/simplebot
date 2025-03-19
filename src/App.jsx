@@ -5,11 +5,11 @@ const App = () => {
   const [messages, setMessages] = useState([]);
 
   return (
-    <div>
+    <div className='self-center'> 
       <div className='max-w-[600px] my-0 mx-auto p-[20px] border border-gray-300 rounded-lg'>
-        <div className=''>
+        <div className='h-[400px] border border-gray-300 rounded-lg overflow-y-auto p-[10px] bg-[#f9f9f9] mb-[10px]'> 
           <div>
-          <p className='text-2xl'>Hello</p>
+          <p className='my-[10px] mx-0'>Hello</p>
           </div>
         </div>
 
