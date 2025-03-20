@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const App = () => {
 
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([{ text: "Hi there! 👋 Looking for a new gadget? Let me help! 📱", sender: "bot" }]);
   const [input, setInput] = useState('')
 
 
@@ -15,12 +15,28 @@ const App = () => {
 
     setTimeout(() => {
       const botReply = {
-        send:'bot',
+        sender:'bot',
         text:getBotResponse(input)
-      }
-    })
-  
+      };
 
+      setMessages((prevMessages)=> [...prevMessages, botReply],1000);
+    })
+    setInput('');
+  }
+
+  const getBotResponse =(userMessage) => {
+    const lowerCaseMessage = userMessage.toLowerCase();
+    if (lowerCaseMessage.includes('smartphones')) {
+      return "What features do you need? 📱 1️⃣ High-performance 2️⃣ Great camera 3️⃣ Long battery 4️⃣ Budget-friendly";
+    }else if(lowerCaseMessage.includes('camera')){
+      return "Here are some options: 📸 1. iPhone 15 Pro 2. Samsung S24 Ultra 3. Google Pixel 8 Pro. Which one interests you?";
+    } else if (lowerCaseMessage.includes('discount')) {
+      return "We have a **10% discount** on the Google Pixel 8 Pro! 🎉";
+    } else if(lowerCaseMessage.includes('shipping')){
+      return "Standard shipping: 3-5 days 📦 | Express shipping: 1-2 days 🚀. Which one do you prefer?"
+    } else {
+      return "I didn't quite get that 🤖. Can you specify what you're looking for?";
+    }
   }
 
   return (
