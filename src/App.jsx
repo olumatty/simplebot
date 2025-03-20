@@ -25,37 +25,37 @@ const App = () => {
   }
 
   const getBotResponse =(input) => {
-    if (input.includes("smartphone")) {
+    if (input.includes("smartphone ||Smartphone")) {
       return { text: "Great! What do you need in a phone? (High Performance, Great Camera, Long Battery, Budget-Friendly)", sender: "bot" };
     }
-    if (input.includes("laptop")) {
+    if (input.includes("laptop || Laptop")) {
       return { text: "What kind of laptop are you looking for? (Gaming, Work/Office, Student, MacBook)", sender: "bot" };
     }
-    if (input.includes("accessories")) {
+    if (input.includes("accessories || Accessories")) {
       return { text: "We have a variety of accessories! (Headphones, Chargers, Phone Cases, Smartwatches)", sender: "bot" };
     }
-    if (input.includes("high performance")) {
+    if (input.includes("high performance || High perfomance")) {
       return { text: "For high performance, I recommend **iPhone 15 Pro Max** or **Samsung S24 Ultra** 🚀", sender: "bot" };
     }
-    if (input.includes("great camera")) {
+    if (input.includes("great camera || Great camera")) {
       return { text: "For the best cameras, check out **Google Pixel 8 Pro** or **iPhone 15 Pro** 📸", sender: "bot" };
     }
     if (input.includes("long battery")) {
       return { text: "For battery life, try **Samsung M54** or **iPhone 13 Pro Max** 🔋", sender: "bot" };
     }
-    if (input.includes("budget")) {
+    if (input.includes("budget || Budget ")) {
       return { text: "Affordable picks: **Redmi Note 12**, **Samsung A54**, **Moto G Power** 💰", sender: "bot" };
     }
-    if (input.includes("gaming")) {
+    if (input.includes("gaming || Gaming")) {
       return { text: "Top gaming laptops: **Asus ROG Zephyrus G14**, **Alienware M15 R7** 🎮", sender: "bot" };
     }
-    if (input.includes("work") || input.includes("office")) {
+    if (input.includes("work || Work") || input.includes("office")) {
       return { text: "For work: **MacBook Air M2**, **Dell XPS 15**, **HP Spectre x360** 💼", sender: "bot" };
     }
-    if (input.includes("student")) {
+    if (input.includes("student || Student")) {
       return { text: "Student-friendly: **Lenovo Ideapad 3**, **Acer Aspire 5**, **MacBook Air M1** 🎓", sender: "bot" };
     }
-    if (input.includes("macbook")) {
+    if (input.includes("macbook || Macbook")) {
       return { text: "MacBook options: **MacBook Air M2** for portability, **MacBook Pro M3** for power 🍏", sender: "bot" };
     }
     return { text: "I didn't quite get that 🤖. Try again with a keyword like 'Smartphones', 'Laptops', or 'Accessories'. or you can contact 07034567459", sender: "bot" };
