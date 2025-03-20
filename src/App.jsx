@@ -60,6 +60,8 @@ const App = () => {
     }
     return { text: "I didn't quite get that 🤖. Try again with a keyword like 'Smartphones', 'Laptops', or 'Accessories'. or you can call us 07034567459", sender: "bot" };
   };
+  
+  const text ="<YOUR_API_KEY>"
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6"> 
