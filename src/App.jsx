@@ -16,11 +16,11 @@ const App = () => {
     setTimeout(() => {
       const botReply = {
         sender:'bot',
-        text:getBotResponse(input)
+        text:getBotResponse(input).text
       };
 
-      setMessages((prevMessages)=> [...prevMessages, botReply],1000);
-    })
+      setMessages((prevMessages)=> [...prevMessages, botReply]);
+    },1000)
     setInput('');
   }
 
@@ -58,16 +58,16 @@ const App = () => {
     if (input.includes("macbook")) {
       return { text: "MacBook options: **MacBook Air M2** for portability, **MacBook Pro M3** for power 🍏", sender: "bot" };
     }
-    return { text: "I didn't quite get that 🤖. Try again with a keyword like 'Smartphones', 'Laptops', or 'Accessories'.", sender: "bot" };
+    return { text: "I didn't quite get that 🤖. Try again with a keyword like 'Smartphones', 'Laptops', or 'Accessories'. or you can contact 07034567459", sender: "bot" };
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 p-6"> 
       <div className='w-full max-w-[500px] bg-white shadow-lg rounded-xl p-6 border border-gray-200'>
         <div className='h-[400px] border border-gray-300 rounded-xl overflow-y-auto p-4 bg-gray-50 space-y-3'>
-          {messages.map((message, index) => (
-            <div key={index} className={`chat-message ${message.sender ==='bot'?'items-left bg-[#e1f5fe] p-2 rounded-[10px] w-fit' :'items-right bg-[#c8e6c9] p-2 rounded-[10px] w-fit ml-auto'}`}>
-              <p className='text-sm'>{message.text}</p>
+          {messages.map((msg, index) => (
+           <div key={index} className={`${msg.sender === 'bot' ? 'items-left bg-[#e1f5fe] p-2 rounded-[10px] w-fit' : 'items-right bg-[#c8e6c9] p-2 rounded-[10px] w-fit'}`}>
+              <p className='text-sm'>{msg.text}</p>
             </div>
           ))} 
         </div>
