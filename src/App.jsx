@@ -76,8 +76,8 @@ const App = () => {
         </div>
 
         <div className='flex mt-2 content-center gap-3'>
-          <input type='text' className='flex-1 h-14 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none placeholder:text-[14px]' value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && handleSend()} placeholder='Type your message here...'/>
-          <button className='py-1 px-1.5 md:py-3 md:px-4 bg-blue-500 text-white rounded-lg shadow outline-none transition-transform transform hover:scale-105 hover:bg-gray-200 hover:text-blue-500' onClick={handleSend}>Send</button>
+          <input type='text' className='md:w-full md:flex-1 h-14 px-6 md:px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none placeholder:text-[14px]' value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && handleSend()} placeholder='Type your message here...'/>
+          <button className='py-3 px-4  md:w-auto bg-blue-500 text-white rounded-lg shadow outline-none transition-transform transform hover:scale-105 hover:bg-gray-200 hover:text-blue-500' onClick={handleSend}>Send</button>
         </div>
       </div>
     </div>
